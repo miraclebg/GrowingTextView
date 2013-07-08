@@ -26,9 +26,10 @@
 //	THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "CustomTextView.h"
 
 
-@interface HPTextViewInternal : UITextView
+@interface HPTextViewInternal : CustomTextView
 
 @property (nonatomic, strong) NSString *placeholder;
 @property (nonatomic, strong) UIColor *placeholderColor;

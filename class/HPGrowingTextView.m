@@ -74,7 +74,8 @@
     r.origin.y = 0;
     r.origin.x = 0;
     internalTextView = [[HPTextViewInternal alloc] initWithFrame:r];
-    internalTextView.delegate = self;
+//    internalTextView.delegate = self;
+    internalTextView.textViewDelegate = self;
     internalTextView.scrollEnabled = NO;
     internalTextView.font = [UIFont fontWithName:@"Helvetica" size:13]; 
     internalTextView.contentInset = UIEdgeInsetsZero;		
@@ -143,7 +144,8 @@
     // Use internalTextView for height calculations, thanks to Gwynne <http://blog.darkrainfall.org/>
     NSString *saveText = internalTextView.text, *newText = @"-";
     
-    internalTextView.delegate = nil;
+//    internalTextView.delegate = nil;
+    internalTextView.textViewDelegate = nil;
     internalTextView.hidden = YES;
     
     for (int i = 1; i < n; ++i)
@@ -155,7 +157,8 @@
     
     internalTextView.text = saveText;
     internalTextView.hidden = NO;
-    internalTextView.delegate = self;
+//    internalTextView.delegate = self;
+    internalTextView.textViewDelegate = self;
     
     [self sizeToFit];
     
@@ -180,7 +183,8 @@
 	// Use internalTextView for height calculations, thanks to Gwynne <http://blog.darkrainfall.org/>
     NSString *saveText = internalTextView.text, *newText = @"-";
     
-    internalTextView.delegate = nil;
+//    internalTextView.delegate = nil;
+    internalTextView.textViewDelegate = nil;
     internalTextView.hidden = YES;
     
     for (int i = 1; i < m; ++i)
@@ -192,7 +196,8 @@
     
     internalTextView.text = saveText;
     internalTextView.hidden = NO;
-    internalTextView.delegate = self;
+//    internalTextView.delegate = self;
+    internalTextView.textViewDelegate = self;
     
     [self sizeToFit];
     

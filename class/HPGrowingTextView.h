@@ -26,6 +26,7 @@
 //	THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "HPTextViewInternal.h"
 
 @class HPGrowingTextView;
 @class HPTextViewInternal;
@@ -82,7 +83,7 @@
 @property NSTimeInterval animationDuration;
 @property (nonatomic, strong) NSString *placeholder;
 @property (nonatomic, strong) UIColor *placeholderColor;
-@property (nonatomic, strong) UITextView *internalTextView;	
+@property (nonatomic, strong) HPTextViewInternal *internalTextView;
 
 
 //uitextview properties
