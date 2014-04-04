@@ -103,7 +103,11 @@
     [super drawRect:rect];
     if (displayPlaceHolder && placeholder && placeholderColor) {
         [placeholderColor set];
-        [placeholder drawInRect:CGRectMake(5.0f, 8.0f, self.frame.size.width - 10.0f, self.frame.size.height - 16.0f) withFont:self.font];
+        if ([[[UIDevice currentDevice] systemVersion] hasPrefix:@"7."]) {
+            [placeholder drawInRect:CGRectMake(5.0f, 8.0f, self.frame.size.width - 10.0f, self.frame.size.height - 16.0f) withFont:self.font];
+        } else {
+            [placeholder drawInRect:CGRectMake(8.0f, 8.0f, self.frame.size.width - 16.0f, self.frame.size.height - 16.0f) withFont:self.font];
+        }
     }
 }
 
