@@ -68,6 +68,7 @@
 	
 	BOOL animateHeightChange;
     NSTimeInterval animationDuration;
+    BOOL willRefreshHeight;
 	
 	//uitextview properties
 	NSObject <HPGrowingTextViewDelegate> *__unsafe_unretained delegate;
